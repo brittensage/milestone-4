@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project explores Drake’s record-breaking career and chart performance on the Billboard Hot 100.\nData is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021."
+  },
+  {
+    "objectID": "about.html#about-this-project",
+    "href": "about.html#about-this-project",
+    "title": "About",
+    "section": "",
+    "text": "This project explores Drake’s record-breaking career and chart performance on the Billboard Hot 100.\nData is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Drake’s Billboard Hot 100 Trajectory",
+    "section": "",
+    "text": "Drake is one of the most commercially successful artists in Billboard history. To analyze his sustained chart dominance, we examined every weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021, totaling 2,569 observations.\n\n\n\n\n\n\n\n\n\nThe graphic above captures Drake’s evolution from a breakthrough rap artist in 2009 to a dominant force peaking in the late 2010s. With 2,569 total chart weeks represented, we can see high concentrations of top-tier hits beginning around 2015–2018, both as a lead artist and as a featured collaborator."
+  }
+]
