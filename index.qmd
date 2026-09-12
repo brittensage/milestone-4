@@ -1,13 +1,58 @@
 ---
-title: "Drake's Billboard Hot 100 Trajectory"
+title: "Drake: Billboard Hot 100 & Streaming Analytics"
 ---
 
-Drake is one of the most commercially successful artists in Billboard history. To analyze his sustained chart dominance, we examined every weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021, totaling 2,569 observations.
+Welcome to the Drake music analytics project. This site analyzes Drake's historic career through **thousands of data points**—combining over **2,500 weekly Billboard Hot 100 observations** with modern track analytics from [Songstats](https://songstats.com/track/ul9j1yr4/drake).
+
+::: {.stat-grid}
+::: {.stat-card}
+::: {.stat-number}
+2,569
+:::
+::: {.stat-label}
+Total Observations
+:::
+:::
+
+::: {.stat-card}
+::: {.stat-number}
+234
+:::
+::: {.stat-label}
+Distinct Songs
+:::
+:::
+
+::: {.stat-card}
+::: {.stat-number}
+51
+:::
+::: {.stat-label}
+Weeks at #1
+:::
+:::
+
+::: {.stat-card}
+::: {.stat-number}
+301
+:::
+::: {.stat-label}
+Top 10 Weeks
+:::
+:::
+:::
+
+## Chart Trajectory Over Time
+
+The scatter plot below displays every single weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021 (2,569 individual points). Each point represents a track's position during a specific chart week, colored by whether Drake was the lead artist or a featured collaborator.
 
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
+#| fig-width: 10
+#| fig-height: 5.8
+#| dpi: 300
 
 library(tidyverse)
 
@@ -17,26 +62,50 @@ drake_data <- read_csv("data/drake_billboard.csv", show_col_types = FALSE) |>
   )
 
 ggplot(drake_data, aes(x = week_date, y = week_position, color = role)) +
-  geom_point(alpha = 0.45, size = 1.8) +
-  geom_smooth(se = FALSE, method = "loess", span = 0.35, linewidth = 1) +
-  scale_y_reverse(breaks = c(1, seq(10, 100, by = 10))) +
-  scale_color_manual(values = c("Lead Artist" = "#1d4ed8", "Featured Artist" = "#ea580c")) +
+  geom_point(alpha = 0.42, size = 1.9) +
+  geom_smooth(se = FALSE, method = "loess", span = 0.32, linewidth = 1.1) +
+  scale_y_reverse(breaks = c(1, 10, 25, 50, 75, 100)) +
+  scale_color_manual(values = c("Lead Artist" = "#1e40af", "Featured Artist" = "#ea580c")) +
   scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
   labs(
     title = "Drake on the Billboard Hot 100 (2009–2021)",
-    subtitle = "Tracking 2,569 weekly chart positions across lead and featured tracks",
+    subtitle = "Tracking 2,569 weekly positions across lead and featured tracks",
     x = "Year",
     y = "Billboard Hot 100 Rank (1 is top)",
     color = "Drake's Role",
-    caption = "Source: TidyTuesday / Billboard (2,569 observations)"
+    caption = "Source: TidyTuesday / Billboard.com (2,569 observations)"
   ) +
   theme_minimal(base_size = 13) +
   theme(
-    plot.title = element_text(face = "bold", size = 16),
-    plot.subtitle = element_text(color = "#4b5563", margin = margin(b = 10)),
+    plot.title = element_text(face = "bold", size = 16, color = "#0f172a"),
+    plot.subtitle = element_text(color = "#475569", margin = margin(b = 12)),
     legend.position = "top",
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "#f1f5f9")
   )
 ```
 
-The graphic above captures Drake's evolution from a breakthrough rap artist in 2009 to a dominant force peaking in the late 2010s. With 2,569 total chart weeks represented, we can see high concentrations of top-tier hits beginning around 2015–2018, both as a lead artist and as a featured collaborator.
+## Key Findings
+
+1. **Volume and Consistency:** Across 2,569 chart entries, Drake maintained an unbroken presence on the Hot 100 spanning more than a decade (2009–2021).
+2. **Lead vs. Feature Dynamics:** Early in his career (2009–2012), guest features (such as with Lil Wayne and Nicki Minaj) accelerated his exposure. By 2015–2018, Drake's lead tracks dominated the upper echelon of the chart.
+3. **Chart Saturation:** Major album release weeks (such as *Scorpion* in 2018 and *Views* in 2016) placed dozens of tracks simultaneously on the chart.
+
+---
+
+## Featured Streaming Data: Songstats Integration
+
+We also integrate track analytics from [Songstats.com](https://songstats.com/track/ul9j1yr4/drake):
+
+::: {.track-card}
+<img src="https://i.scdn.co/image/ab67616d00001e02f0c843a56521f2be4d0d10e2" alt="Drake Track Artwork" class="track-art" />
+
+<div>
+  <h4 style="margin-top:0;">Track: "Drake"</h4>
+  <p style="margin-bottom:0.4rem; color:#475569;"><strong>Artists:</strong> Alsago & Slight Shady &bull; <strong>Release Date:</strong> March 13, 2026</p>
+  <p style="margin-bottom:0.4rem; color:#475569;"><strong>ISRC:</strong> <code>CAHQJ2683690</code> &bull; <strong>Monitored Platforms:</strong> 184 Countries on Spotify, Apple Music, Deezer, Amazon & Tidal</p>
+  <p style="margin-bottom:0;"><a href="songstats.html" class="btn btn-outline-primary btn-sm">View Full Songstats Analytics &rarr;</a> <a href="https://songstats.com/track/ul9j1yr4/drake" target="_blank" class="btn btn-outline-secondary btn-sm">Open on Songstats.com &nearr;</a></p>
+</div>
+:::
+
+To explore all 2,569 observations row by row, visit the [Data Explorer](data.html).

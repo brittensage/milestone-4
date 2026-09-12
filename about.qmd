@@ -2,8 +2,22 @@
 title: "About"
 ---
 
-## About This Project
+## Project Overview
 
-This project explores Drake's record-breaking career and chart performance on the Billboard Hot 100. 
+This website was created as part of data science research analyzing Drake's commercial trajectory and streaming analytics across the music industry.
 
-Data is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021.
+## Data Sources
+
+1. **Billboard Hot 100 Historical Archive (TidyTuesday):**
+   - Contains **2,569 weekly observations** specifically tracking songs where Drake was credited as a lead artist or featured performer between 2008 and 2021.
+   - Sourced from the official [TidyTuesday Billboard repository](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-09-14).
+
+2. **Songstats Track Analytics:**
+   - Real-time and catalog streaming data for the release titled **"Drake"** by Alsago & Slight Shady.
+   - Available via [Songstats](https://songstats.com/track/ul9j1yr4/drake).
+
+## Author
+
+- **Author:** Britten
+- **Course:** Data Science (*Preceptor's Primer for Bayesian Data Science*)
+- **Repository:** [brittensage/milestone-4](https://github.com/brittensage/milestone-4)

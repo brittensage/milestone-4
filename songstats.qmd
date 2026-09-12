@@ -1,0 +1,67 @@
+---
+title: "Songstats Track Analytics"
+---
+
+This page provides analytics and metadata for the track titled **"Drake"** sourced from [Songstats](https://songstats.com/track/ul9j1yr4/drake).
+
+::: {.track-card}
+<img src="https://i.scdn.co/image/ab67616d00001e02f0c843a56521f2be4d0d10e2" alt="Drake Cover Art" class="track-art" />
+
+<div>
+  <h3 style="margin-top:0;">Drake</h3>
+  <p style="margin-bottom:0.5rem; color:#475569;"><strong>Artists:</strong> Alsago, Slight Shady</p>
+  <p style="margin-bottom:0.5rem; color:#475569;"><strong>Release Date:</strong> March 13, 2026</p>
+  <p style="margin-bottom:0.75rem; color:#475569;"><strong>ISRC:</strong> <code>CAHQJ2683690</code> &bull; <strong>Duration:</strong> 4 min 03 sec</p>
+  <div>
+    <span class="badge-tag">Spotify</span>
+    <span class="badge-tag">Apple Music</span>
+    <span class="badge-tag">Amazon</span>
+    <span class="badge-tag">Deezer</span>
+    <span class="badge-tag">Tidal</span>
+  </div>
+</div>
+:::
+
+## Track Details
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(knitr)
+
+songstats_info <- read_csv("data/songstats_track.csv", show_col_types = FALSE)
+
+tibble(
+  Metric = c(
+    "Track Name",
+    "Artists",
+    "Release Date",
+    "ISRC Code",
+    "Duration",
+    "Available Global Markets",
+    "Songstats Source URL"
+  ),
+  Value = c(
+    "Drake",
+    "Alsago & Slight Shady",
+    "2026-03-13",
+    "CAHQJ2683690",
+    "4:03 (243,421 ms)",
+    "184 territories",
+    "[songstats.com/track/ul9j1yr4/drake](https://songstats.com/track/ul9j1yr4/drake)"
+  )
+) |> 
+  kable(col.names = c("Property", "Details"))
+```
+
+## Streaming Distribution
+
+According to Songstats cross-platform monitoring, the release is tracked across multiple DSPs including:
+- **Spotify:** Available across 184 country markets. [Listen on Spotify](https://open.spotify.com/track/3wHPdSFvxcwYZqHWw05vGG)
+- **Apple Music:** Catalog ID `1880726848`
+- **Deezer:** Track ID `3871419791`
+- **Tidal:** Track ID `502868283`
+- **Amazon Music:** ASIN `B0GQJP4F4K`

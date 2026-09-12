@@ -1,0 +1,38 @@
+---
+title: "Data Explorer"
+---
+
+This page lets you explore all **2,569 weekly observations** in the Drake Billboard Hot 100 dataset. Use the search bars at the top of each column to filter by song, rank, or date.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(DT)
+
+drake_table <- read_csv("data/drake_billboard.csv", show_col_types = FALSE) |> 
+  select(
+    `Chart Date` = week_date,
+    `Rank` = week_position,
+    `Song Title` = song,
+    `Performer Credit` = performer,
+    `Peak Rank` = peak_position,
+    `Weeks on Chart` = weeks_on_chart
+  ) |> 
+  arrange(desc(`Chart Date`), `Rank`)
+
+datatable(
+  drake_table,
+  filter = "top",
+  rownames = FALSE,
+  class = "hover stripe compact",
+  options = list(
+    pageLength = 20,
+    lengthMenu = c(10, 20, 50, 100),
+    autoWidth = TRUE,
+    scrollX = TRUE
+  )
+)
+```
