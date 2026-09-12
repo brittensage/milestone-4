@@ -1,23 +1,86 @@
 [
   {
+    "objectID": "songstats.html",
+    "href": "songstats.html",
+    "title": "Songstats Track Analytics",
+    "section": "",
+    "text": "This page provides analytics and metadata for the track titled “Drake” sourced from Songstats."
+  },
+  {
+    "objectID": "songstats.html#track-details",
+    "href": "songstats.html#track-details",
+    "title": "Songstats Track Analytics",
+    "section": "Track Details",
+    "text": "Track Details\n\n\n\n\n\nProperty\nDetails\n\n\n\n\nTrack Name\nDrake\n\n\nArtists\nAlsago & Slight Shady\n\n\nRelease Date\n2026-03-13\n\n\nISRC Code\nCAHQJ2683690\n\n\nDuration\n4:03 (243,421 ms)\n\n\nAvailable Global Markets\n184 territories\n\n\nSongstats Source URL\nsongstats.com/track/ul9j1yr4/drake"
+  },
+  {
+    "objectID": "songstats.html#streaming-distribution",
+    "href": "songstats.html#streaming-distribution",
+    "title": "Songstats Track Analytics",
+    "section": "Streaming Distribution",
+    "text": "Streaming Distribution\nAccording to Songstats cross-platform monitoring, the release is tracked across multiple DSPs including: - Spotify: Available across 184 country markets. Listen on Spotify - Apple Music: Catalog ID 1880726848 - Deezer: Track ID 3871419791 - Tidal: Track ID 502868283 - Amazon Music: ASIN B0GQJP4F4K"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This project explores Drake’s record-breaking career and chart performance on the Billboard Hot 100.\nData is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021."
+    "text": "This website was created as part of data science research analyzing Drake’s commercial trajectory and streaming analytics across the music industry."
   },
   {
-    "objectID": "about.html#about-this-project",
-    "href": "about.html#about-this-project",
+    "objectID": "about.html#project-overview",
+    "href": "about.html#project-overview",
     "title": "About",
     "section": "",
-    "text": "This project explores Drake’s record-breaking career and chart performance on the Billboard Hot 100.\nData is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021."
+    "text": "This website was created as part of data science research analyzing Drake’s commercial trajectory and streaming analytics across the music industry."
+  },
+  {
+    "objectID": "about.html#data-sources",
+    "href": "about.html#data-sources",
+    "title": "About",
+    "section": "Data Sources",
+    "text": "Data Sources\n\nBillboard Hot 100 Historical Archive (TidyTuesday):\n\nContains 2,569 weekly observations specifically tracking songs where Drake was credited as a lead artist or featured performer between 2008 and 2021.\nSourced from the official TidyTuesday Billboard repository.\n\nSongstats Track Analytics:\n\nReal-time and catalog streaming data for the release titled “Drake” by Alsago & Slight Shady.\nAvailable via Songstats."
+  },
+  {
+    "objectID": "about.html#author",
+    "href": "about.html#author",
+    "title": "About",
+    "section": "Author",
+    "text": "Author\n\nAuthor: Britten\nCourse: Data Science (Preceptor’s Primer for Bayesian Data Science)\nRepository: brittensage/milestone-4"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Drake’s Billboard Hot 100 Trajectory",
+    "title": "Drake: Billboard Hot 100 & Streaming Analytics",
     "section": "",
-    "text": "Drake is one of the most commercially successful artists in Billboard history. To analyze his sustained chart dominance, we examined every weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021, totaling 2,569 observations.\n\n\n\n\n\n\n\n\n\nThe graphic above captures Drake’s evolution from a breakthrough rap artist in 2009 to a dominant force peaking in the late 2010s. With 2,569 total chart weeks represented, we can see high concentrations of top-tier hits beginning around 2015–2018, both as a lead artist and as a featured collaborator."
+    "text": "Welcome to the Drake music analytics project. This site analyzes Drake’s historic career through thousands of data points—combining over 2,500 weekly Billboard Hot 100 observations with modern track analytics from Songstats."
+  },
+  {
+    "objectID": "index.html#chart-trajectory-over-time",
+    "href": "index.html#chart-trajectory-over-time",
+    "title": "Drake: Billboard Hot 100 & Streaming Analytics",
+    "section": "Chart Trajectory Over Time",
+    "text": "Chart Trajectory Over Time\nThe scatter plot below displays every single weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021 (2,569 individual points). Each point represents a track’s position during a specific chart week, colored by whether Drake was the lead artist or a featured collaborator."
+  },
+  {
+    "objectID": "index.html#key-findings",
+    "href": "index.html#key-findings",
+    "title": "Drake: Billboard Hot 100 & Streaming Analytics",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nVolume and Consistency: Across 2,569 chart entries, Drake maintained an unbroken presence on the Hot 100 spanning more than a decade (2009–2021).\nLead vs. Feature Dynamics: Early in his career (2009–2012), guest features (such as with Lil Wayne and Nicki Minaj) accelerated his exposure. By 2015–2018, Drake’s lead tracks dominated the upper echelon of the chart.\nChart Saturation: Major album release weeks (such as Scorpion in 2018 and Views in 2016) placed dozens of tracks simultaneously on the chart."
+  },
+  {
+    "objectID": "index.html#featured-streaming-data-songstats-integration",
+    "href": "index.html#featured-streaming-data-songstats-integration",
+    "title": "Drake: Billboard Hot 100 & Streaming Analytics",
+    "section": "Featured Streaming Data: Songstats Integration",
+    "text": "Featured Streaming Data: Songstats Integration\nWe also integrate track analytics from Songstats.com:\n\n\n\n\nTrack: “Drake”\n\n\nArtists: Alsago & Slight Shady • Release Date: March 13, 2026\n\n\nISRC: CAHQJ2683690 • Monitored Platforms: 184 Countries on Spotify, Apple Music, Deezer, Amazon & Tidal\n\n\nView Full Songstats Analytics → Open on Songstats.com ↗\n\n\n\nTo explore all 2,569 observations row by row, visit the Data Explorer."
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data Explorer",
+    "section": "",
+    "text": "This page lets you explore all 2,569 weekly observations in the Drake Billboard Hot 100 dataset. Use the search bars at the top of each column to filter by song, rank, or date."
   }
 ]
