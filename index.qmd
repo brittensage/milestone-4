@@ -1,0 +1,42 @@
+---
+title: "Drake's Billboard Hot 100 Trajectory"
+---
+
+Drake is one of the most commercially successful artists in Billboard history. To analyze his sustained chart dominance, we examined every weekly appearance by Drake on the Billboard Hot 100 between 2009 and 2021, totaling 2,569 observations.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+drake_data <- read_csv("data/drake_billboard.csv", show_col_types = FALSE) |> 
+  mutate(
+    role = if_else(str_starts(performer, "Drake"), "Lead Artist", "Featured Artist")
+  )
+
+ggplot(drake_data, aes(x = week_date, y = week_position, color = role)) +
+  geom_point(alpha = 0.45, size = 1.8) +
+  geom_smooth(se = FALSE, method = "loess", span = 0.35, linewidth = 1) +
+  scale_y_reverse(breaks = c(1, seq(10, 100, by = 10))) +
+  scale_color_manual(values = c("Lead Artist" = "#1d4ed8", "Featured Artist" = "#ea580c")) +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  labs(
+    title = "Drake on the Billboard Hot 100 (2009–2021)",
+    subtitle = "Tracking 2,569 weekly chart positions across lead and featured tracks",
+    x = "Year",
+    y = "Billboard Hot 100 Rank (1 is top)",
+    color = "Drake's Role",
+    caption = "Source: TidyTuesday / Billboard (2,569 observations)"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(color = "#4b5563", margin = margin(b = 10)),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+The graphic above captures Drake's evolution from a breakthrough rap artist in 2009 to a dominant force peaking in the late 2010s. With 2,569 total chart weeks represented, we can see high concentrations of top-tier hits beginning around 2015–2018, both as a lead artist and as a featured collaborator.

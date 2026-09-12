@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+## About This Project
+
+This project explores Drake's record-breaking career and chart performance on the Billboard Hot 100. 
+
+Data is sourced from Billboard Hot 100 historical weekly archives (via TidyTuesday), containing 2,569 individual weekly chart observations from 2009 through 2021.
